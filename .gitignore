@@ -504,6 +504,8 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+*.sln
+.vscode
 
 # Visual Studio Code
 .vscode/*
