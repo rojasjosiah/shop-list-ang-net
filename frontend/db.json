@@ -1,0 +1,28 @@
+{
+    "locations": [
+        {
+            "id": 1,
+            "name": "Groceries",
+            "itemCount": 3,
+            "photo": "grocery.png"
+        },
+        {
+            "id": 2,
+            "name": "Target",
+            "itemCount": 1,
+            "photo": "target.png"
+        },
+        {
+            "id": 3,
+            "name": "Costco",
+            "itemCount": 2,
+            "photo": "costco.png"
+        },
+        {
+            "id": 4,
+            "name": "Hardware",
+            "itemCount": 0,
+            "photo": "hardware.png"
+        }
+    ]
+}

@@ -1,1 +1,26 @@
-<p>shopping-list works! {{ storeListingId }}</p>
+<article>
+    <img class="store-type-photo" [src]="storeListing?.photo">
+    <section class="store-type-desc">
+        <h2 class="store-type-heading">{{storeListing?.name}}</h2>
+        <p class="store-type-item-count">Item Count: {{storeListing?.itemCount}}</p>
+    </section>
+    <section class="store-type-features">
+        <h2 class="section-heading">About this Store Type</h2>
+        <ul>
+            <li>Items Needed: {{storeListing?.itemCount}}</li>
+            <li>Another random item: {{storeListing?.itemCount}}</li>
+        </ul>
+        <section class="store-type-add-item">
+            <h2 class="section-heading">Add item to Store</h2>
+            <form [formGroup]="addItemForm" (submit)="submitItem()">
+                <label for="item-name">Item Name</label>
+                <input id="item-name" type="text" formControlName="itemName">
+                <label for="item-amount">Amount</label>
+                <input id="item-amount" type="text" formControlName="itemAmount">
+                <label for="item-measure-unit">Unit</label>
+                <input id="item-measure-unit" type="text" formControlName="itemMeasureUnit">
+                <button class="primary" type="submit">Add</button>
+            </form>
+        </section>
+    </section>
+</article>

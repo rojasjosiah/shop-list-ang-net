@@ -21,3 +21,8 @@ button.primary {
   color: white;
   border-radius: 8px;
 }
+
+button.primary:active {
+  background-color: var(--secondary-color); /* You can use a darker shade */
+  transform: scale(0.98); /* Button slightly shrinks when clicked */
+}
