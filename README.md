@@ -28,7 +28,9 @@ run setup, currently uninitialized. Angular used to create frontend for web app,
 ### 5. **Shared Lists**
 
 - Users can share shopping lists with others for real-time updates and collaboration.
-- **SQL**: Create a `shared_lists` table to manage the sharing functionality, storing `user_id`, `list_id`, and `shared_with_user_id`.
+- **SQL**: Create a `user_lists` table to model many-to-many functionality, each storing a `list_id` and
+`user_id`, allowing a user to add other users to edit their list. Only the list owner can add new permissions 
+(canShare, canEdit, canDelete)
 
 ## Example Database Schema
 
@@ -44,6 +46,12 @@ run setup, currently uninitialized. Angular used to create frontend for web app,
 | --- | --- | --- | --- |
 | 1 | 1 | Grocery List | 2025-02-01 |
 
+### **user_lists Table** (Many-to-Many)
+
+| list_id | user_id | permissions |
+| --- | --- | --- | 
+| 1 | 1 | ["canShare", "canEdit"] |
+
 ### **items Table**
 
 | item_id | list_id | item_name | quantity | status |
@@ -58,7 +66,7 @@ run setup, currently uninitialized. Angular used to create frontend for web app,
 | 1 | Produce |
 | 2 | Dairy |
 
-### **item_categories Table** (Many-to-Many Relationship)
+### **item_categories Table** (Many-to-Many)
 
 | item_id | category_id |
 | --- | --- |
