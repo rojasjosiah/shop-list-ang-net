@@ -31,6 +31,9 @@ run setup, currently uninitialized. Angular used to create frontend for web app,
 - **SQL**: Create a `user_lists` table to model many-to-many functionality, each storing a `list_id` and
 `user_id`, allowing a user to add other users to edit their list. Only the list owner can add new permissions 
 (canShare, canEdit, canDelete)
+- **SQL**: Create a `user_lists` table to model many-to-many functionality, each storing a `list_id` and
+`user_id`, allowing a user to add other users to edit their list. Only the list owner can add new permissions 
+(canShare, canEdit, canDelete)
 
 ## Example Database Schema
 
